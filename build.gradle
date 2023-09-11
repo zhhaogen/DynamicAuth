@@ -8,5 +8,7 @@ allprojects{
 	        targetCompatibility = SOURCE_VERSION
 	    }
 	}
-	apply from:"${System.env.GRADLE_USER_HOME}/../scripts/junit5.gradle"
+	dependencies { 
+		testImplementation "org.junit.jupiter:junit-jupiter:${LOCAL_JUNIT5_VERSION}"
+	}
 }

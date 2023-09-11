@@ -1,1 +1,12 @@
-apply from:"${System.env.GRADLE_USER_HOME}/../scripts/projectSetting.gradle"
+System.out.println("---including projects---");
+ File[] dirs=settingsDir.listFiles();
+if(dirs!=null){
+    for(File dir in dirs){
+	    if(dir.isDirectory()&&new File(dir,"build.gradle").exists()&&!new File(dir,"ignore").exists()){
+	         String name=dir.getName();
+	         System.out.println("include "+name);
+	          include(name);
+	    }
+	}
+}
+System.out.println("###including projects###");
