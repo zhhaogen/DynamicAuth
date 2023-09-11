@@ -1,0 +1,4 @@
+dependencies {  
+	implementation project(":${PROJECT_NAME}.paillier")
+	implementation project(":${PROJECT_NAME}.common")
+}

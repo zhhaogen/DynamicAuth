@@ -1,0 +1,12 @@
+allprojects{ 
+	apply plugin:"java"
+	apply plugin:"java-library"
+	version = LIBRARY_VERSION
+	 java {
+	    toolchain {
+	        sourceCompatibility = SOURCE_VERSION
+	        targetCompatibility = SOURCE_VERSION
+	    }
+	}
+	apply from:"${System.env.GRADLE_USER_HOME}/../scripts/junit5.gradle"
+}

@@ -1,0 +1,1 @@
+apply from:"${System.env.GRADLE_USER_HOME}/../scripts/projectSetting.gradle"
